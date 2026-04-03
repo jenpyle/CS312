@@ -37,5 +37,10 @@
             <button type="submit">About Page</button>
         </form>
     </li>
-
+    <li>
+        <form method="POST" action="index.php?direction=<?php echo $direction; ?>">
+            <input type="hidden" name="page" value="about">
+            <button type="submit">Contact Page</button>
+        </form>
+    </li>
 </ul>

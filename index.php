@@ -18,9 +18,7 @@ if (isset($_POST["page"])) {
     $page = "home";
 }
 
-if ($page !== "home" && $page !== "about") {
-    $page = "home";
-}
+
 ?>
 
 <!DOCTYPE html>
