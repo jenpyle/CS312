@@ -1,0 +1,72 @@
+:root {
+	--e1: #2703a6;
+	--e2: #593ea2;
+	--e3: #141259;
+	--e4: #f2b705;
+	--e5: #f29f05;
+
+	--w1: #0e0906;
+	--w2: #29524a;
+	--w3: #94a187;
+	--w4: #8c8c88;
+	--w5: #102542;
+}
+p,
+h1,
+h2,
+h3,
+li,
+a {
+	color: var(--e4);
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: White;
+}
+
+body {
+	background-color: var(--e1);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.top-section {
+	border-bottom: 5px solid #f29f05;
+	width: 100%;
+}
+
+main {
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px;
+	width: 800px;
+	p,
+	h1,
+	h2,
+	h3,
+	li,
+	a {
+		color: var(--e3);
+	}
+}
+
+.top-section {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--e3);
+}
+
+.navigation-list {
+	display: flex; /* Activates Flexbox layout */
+	list-style: none; /* Removes default bullets */
+	margin: 50; /* Removes default padding */
+	justify-content: center; /* Centers the items horizontally within the container */
+	gap: 60px; /* Adds space between items */
+	font-size: 30px;
+}
