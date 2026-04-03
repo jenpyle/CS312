@@ -37,6 +37,8 @@
     <?php include 'content/header.php'; ?>
     <?php include 'content/navbar.php'; ?>
     <?php include 'content/' . $page . '.php'; ?>
+    <?php include 'content/footer.php'; ?>
+
 </body>
 
 </html>
