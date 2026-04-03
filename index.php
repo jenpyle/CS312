@@ -3,42 +3,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+// Handle direction (GET)
+if (isset($_GET["direction"])) {
+    $direction = $_GET["direction"];
+} else {
+    $direction = "east";
+}
+
+// Only allow east or west
+if ($direction !== "east" && $direction !== "west") {
+    $direction = "east";
+}
+
+// Handle page (POST)
+if (isset($_POST["page"])) {
+    $page = $_POST["page"];
+} else {
+    $page = "home";
+}
+
+// Only allow valid page names
+if ($page !== "home" && $page !== "about") {
+    $page = "home";
+}
+?>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="author" content="Jennifer Pyle" />
     <meta name="description" content="Portfolio site for Jennifer Pyle" />
     <meta name="keywords" content="HTML, CSS, JavaScript, PHP" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jennifer Pyle - Homepage</title>
+    <title>Jennifer Pyle - Homepage1</title>
+    <link rel="stylesheet" type="text/css" href="content/<?php echo $direction; ?>.css">
 </head>
-<main>
-    <?php
-    $direction = isset($_GET["direction"]) ? $_GET["direction"] : "east";
-    if ($direction !== "east" && $direction !== "west") {
-        $direction = "east";
-    }
-
-    $page = isset($_POST["page"]) ? $_POST["page"] : "home";
-    if ($page !== "home" && $page !== "about") {
-        $page = "home";
-    }
-
-    echo '<link rel="stylesheet" type="text/css" href="content/' . $direction . '.css" >';
-
-
-    // include 'content/navbar.php';
-    // include 'content/' . $page . '.php';
-    
-    ?>
-
-</main>
 
 <body>
     <?php include 'content/header.php'; ?>
     <?php include 'content/navbar.php'; ?>
-    <?php include 'content/' . $page . '.php'; ?>
-    <?php include 'content/footer.php'; ?>
 
+    <main>
+        <?php include 'content/' . $page . '.php'; ?>
+    </main>
+
+    <?php include 'content/footer.php'; ?>
 </body>
 
 </html>
