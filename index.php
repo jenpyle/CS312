@@ -35,13 +35,11 @@ if (isset($_POST["page"])) {
 </head>
 
 <body>
-
-    <!-- Header (uses $direction and $page) -->
     <?php include 'content/header.php'; ?>
-    <?php include 'content/navbar.php'; ?>
-
-    <?php include 'content/' . $page . '.php'; ?>
-
+    <div class="flex-container">
+        <?php include 'content/navbar.php'; ?>
+        <?php include 'content/' . $page . '.php'; ?>
+    </div>
     <?php include 'content/footer.php'; ?>
 
 </body>
