@@ -1,9 +1,5 @@
 <!-- https://cs.colostate.edu:4444/~C830350809/eastwest/content/navbar.php -->
 <!-- in the navbar you should be using the GET and POST to change direction variable for the home page -->
-<header>
-    <h2>Navigation Bar</h2>
-</header>
-
 <ul class="navigation-list">
 
     <?php if ($direction === "west") { ?>
@@ -39,7 +35,7 @@
     </li>
     <li>
         <form method="POST" action="index.php?direction=<?php echo $direction; ?>">
-            <input type="hidden" name="page" value="about">
+            <input type="hidden" name="page" value="contact">
             <button type="submit">Contact Page</button>
         </form>
     </li>

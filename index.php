@@ -39,9 +39,9 @@ if (isset($_POST["page"])) {
     <!-- Header (uses $direction and $page) -->
     <?php include 'content/header.php'; ?>
     <?php include 'content/navbar.php'; ?>
-    <main>
-        <?php include 'content/' . $page . '.php'; ?>
-    </main>
+
+    <?php include 'content/' . $page . '.php'; ?>
+
     <?php include 'content/footer.php'; ?>
 
 </body>
